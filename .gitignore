@@ -1,0 +1,7 @@
+
+# do not track database settings file
+# see README for details of how to create this
+
+/eqcalc-settings.php
+
+

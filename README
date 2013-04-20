@@ -1,2 +1,53 @@
 
-setting up...
+The English Qaballah Calculator
+===============================
+
+INTRO
+-----
+
+The EQC is a tool for magickians that converts certain words to
+numerical values and numerical values to certain words and phrases.
+
+If that sounds rather mysterious, then the history and usage of the EQC
+is described in more detail at: http://tinyurl.com/bvoldnk
+
+It was originally hosted on the multi-award-winning occult website, The
+Baptist's Head.
+
+SETUP
+-----
+
+These instructions assume you know how to set up PHP websites and MySQL
+databases, and that you already have a working webroot ready to receive
+these files.
+
+1. Copy the files in this project to your webroot folder.
+
+2. Create a MySQL database and a user with access to that database.
+
+3. Run the SQL file 'qaballah.sql' against your database.
+
+4. Create in your EQC webroot a file named 'eqcalc-settings.php'.
+
+5. This file should contain the following, with the parts in square
+   brackets replaced with appropriate values:
+   
+   <?php
+	   $host = "localhost";
+	   $database = "[database name]";
+	   $user = "[username]";
+	   $password = "[password]";
+   ?>
+
+6. Invoke your EQC webroot to consult the English Qaballah Calculator.
+
+ENJOY
+-----
+
+It's basic and the code is ugly, but that's why we've released it.
+
+Be sure to let us know if you host a version of this code anywhere on
+the web, and we'll link back to it from http://thebaptistshead.co.uk.
+
+duncan246
+duncan@oeith.co.uk
