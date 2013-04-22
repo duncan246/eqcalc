@@ -11,6 +11,8 @@ echo '
 			<input type="reset" value="Clear">
 		</p>
 	</form>';
+	
+echo $output;
 
 ?>
 

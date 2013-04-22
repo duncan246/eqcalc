@@ -1,7 +1,9 @@
 	
 	<?php
 	
-		include '../krumo/class.krumo.php';
+		include 'TagCloudGenerator.inc.php';
+		$tagCloudGenerator= new TagCloudGenerator();
+
 	
 		if (isset($_POST['theWords'])){
 
@@ -23,14 +25,33 @@
 
 		} else {
 				
-			$output = '';
+			$result = '';
 			
 		}
 		
-		krumo($result);
+		$output = '';
+		$output = $output . output_for_words($result) . '<br/>' . output_for_phrases($result);
 		require 'render.php';
 	
 	
+		function output_for_phrases($result){
+			global $tagCloudGenerator;
+			if (isset($result['phrases'])){
+				$output = '';
+				foreach($result['phrases'] as $phrase){
+					$output = $tagCloudGenerator->generateTagCloudFromString($phrase,'');
+				}
+			}
+			return $output;
+		}
+		
+		function output_for_words($result){
+			global $tagCloudGenerator;
+			if (isset($result['words'])){
+				$output = $tagCloudGenerator->generateTagCloudFromText(implode(' ',$result['words']));
+			}
+			return $output;
+		}
 	
 		function db_connection(){
 			require("eqcalc-settings.php");
@@ -57,7 +78,6 @@
 			require_once("TagCloudGenerator.inc.php");
 			$tagCloudGenerator= new TagCloudGenerator();
 			$result['words'] = $words;
-			//$tagCloudGenerator->generateTagCloudFromText($bigString);
 			$result['phrases'] = $phrases;
 			return $result;
 		}
