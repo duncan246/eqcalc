@@ -30,7 +30,7 @@
 		}
 		
 		$output = '';
-		$output = $output . output_for_words($result) . '<br/>' . output_for_phrases($result);
+		$output = $output . 'Value: ' . $result['value'] . '<br/>' . output_for_words($result) . '<br/>' . output_for_phrases($result);
 		require 'render.php';
 	
 	
