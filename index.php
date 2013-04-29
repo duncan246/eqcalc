@@ -13,6 +13,7 @@
 			if (is_numeric($theWords)) {
 
 				$result = word_cloud(query_numeric(db_connection(),$theWords));
+				$result['value'] = $theWords;
 
 			} else {
 
@@ -25,7 +26,7 @@
 
 		} else {
 				
-			$result = '';
+			$result = Array ('value' => 0);
 			
 		}
 		
@@ -36,8 +37,8 @@
 	
 		function output_for_phrases($result){
 			global $tagCloudGenerator;
+			$output = '';
 			if (isset($result['phrases'])){
-				$output = '';
 				foreach($result['phrases'] as $phrase){
 					$output = $tagCloudGenerator->generateTagCloudFromString($phrase,'');
 				}
@@ -49,6 +50,8 @@
 			global $tagCloudGenerator;
 			if (isset($result['words'])){
 				$output = $tagCloudGenerator->generateTagCloudFromText(implode(' ',$result['words']));
+			} else {
+				$output = '';
 			}
 			return $output;
 		}
