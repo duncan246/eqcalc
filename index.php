@@ -13,6 +13,7 @@
 			if (is_numeric($theWords)) {
 
 				$result = word_cloud(query_numeric(db_connection(),$theWords));
+				$result['value'] = $theWords;
 
 			} else {
 
