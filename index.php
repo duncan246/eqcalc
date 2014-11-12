@@ -30,16 +30,16 @@
 		}
 		
 		$output = '';
-		$output = $output . 'Value: ' . $result['value'] . '<br/>' . output_for_words($result) . '<br/>' . output_for_phrases($result);
+		$output = $output . 'Value: ' . $result['value'] . '<br/>' . output_for_words($result) . '<br/><br/>' . output_for_phrases($result) . '<br/>';
 		require 'render.php';
 	
 	
 		function output_for_phrases($result){
 			global $tagCloudGenerator;
-			if (isset($result['phrases'])){
-				$output = '';
+			if (count($result['phrases'])){
+				$output = 'Phrases:<br/>';
 				foreach($result['phrases'] as $phrase){
-					$output = $tagCloudGenerator->generateTagCloudFromString($phrase,'');
+					$output .= $tagCloudGenerator->generateTagCloudFromString($phrase,'') . '<br/>';
 				}
 			}
 			return $output;
