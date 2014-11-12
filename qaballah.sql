@@ -621,6 +621,7 @@ INSERT INTO `qaballah` (`id`, `thevalue`, `thetext`) VALUES
 (586, 666, '''I am the flame that burns in every heart of man, and in the core of every star. I am Life, and the giver of Life, yet therefore is theknowledge of me the knowledge of death.'''),
 (587, 1046, '''Now ye shall know that the chosen priest & apostle of infinite space is the prince-priest the Beast; and in his woman called the Scarlet Woman is all power given. They shall gather my children into their fold: they shall bring the glory of the stars into the hearts of men'''),
 (588, 1046, '''Write, & find ecstasy in writing! Work, & be our bed in working! Thrill with the joy of life & death! Ah! thy death shall be lovely: whososeeth it shall be glad. Thy death shall be the seal of the promise of our age long love. Come! lift up thine heart & rejoice! We are one; we are none.''');
+(589, 42, 'Don''t Panic');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
